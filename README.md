@@ -14,6 +14,7 @@ This project demonstrates object-oriented programming, file handling, dice simul
 
 ## 📁 Project Structure
 prog2final/
+
 ├── file_handler.py # File handling classes
 ├── main.py # Main script for dice simulation
 ├── tests/
