@@ -19,6 +19,3 @@ print("Multi-concat content:", multi.read_lines())
 # Test plot
 plot_dice(n=100)
 
-if __name__ == "__main__":
-    rolls = list(dice_generator(seed=40, n=5))
-    print("Generated rolls:", rolls)

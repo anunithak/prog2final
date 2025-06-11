@@ -118,6 +118,3 @@ def plot_dice(n=10):
 
 # plot_dice(n=100)
 
-if __name__ == "__main__":
-    rolls = list(dice_generator(seed=40, n=5))
-    print("Generated rolls:", rolls)
