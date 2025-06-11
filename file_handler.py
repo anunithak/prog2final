@@ -3,8 +3,9 @@ import random
 import matplotlib.pyplot as plt
 
 
-# Step 2: ANSI Color Decorator (for colorizing output)
+
 def deco(color: str):
+    # ANSI Color Decorator 
     colors = {
         "red": "\033[91m",
         "green": "\033[92m",
@@ -24,14 +25,15 @@ def deco(color: str):
     return wrapper
 
 
-# Step 3: Base Class
+
 class FileHandler:
     def __init__(self, filepath):
         self._filepath = filepath
 
-    # Step 4: Property Getter and Setter
+    
     @property
     def filepath(self):
+        # Property Getter and Setter
         return self._filepath
 
     @filepath.setter
@@ -41,22 +43,25 @@ class FileHandler:
         else:
             raise FileNotFoundError("File does not exist.")
 
-    # Step 5: Generator to Read File Line by Line
+   
     def file_generator(self):
+         #Generator to Read File Line by Line
         with open(self._filepath, "r") as f:
             for line in f:
                 yield line.strip()
 
-    # Step 6: Read File and Store Lines Using List Comprehension
+    
     def read_lines(self):
+        #Read File and Store Lines Using List Comprehension
         return [line for line in self.file_generator()]
 
-    # Step 7: __str__ Method
+    
     def __str__(self):
         return f"FileHandler for: {self._filepath}"
 
-    # Step 8: __add__ Method to Concatenate Two Files
+   
     def __add__(self, other):
+         #__add__ Method to Concatenate Two Files
         new_path = "concatenated.txt"
         with open(new_path, "w") as f:
             with open(self._filepath, "r") as f1:
@@ -65,27 +70,29 @@ class FileHandler:
                 f.write(f2.read())
         return FileHandler(new_path)
 
-    # Step 9: Static Method
+   
     @staticmethod
     def count_lines(filepath):
         with open(filepath, "r") as f:
             return sum(1 for _ in f)
 
-    # Step 10: Class Method to Create Instance from a File
+    
     @classmethod
     def from_file(cls, path):
+        #Class Method to Create Instance from a File
         return cls(path)
 
 
-# Step 11: Inherited Class with Extra Functionality
+
 class AdvancedFileHandler(FileHandler):
 
-    # Override __str__
+   
     def __str__(self):
         return f"[Advanced] FileHandler for: {self._filepath}"
 
-    # Method to Concatenate Multiple Files
+    
     def concat_files(self, *paths):
+        # Method to Concatenate Multiple Files
         new_path = "multi_concat.txt"
         with open(new_path, "w") as out:
             for path in paths:
@@ -94,7 +101,7 @@ class AdvancedFileHandler(FileHandler):
         return AdvancedFileHandler(new_path)
 
 
-# Step 12: Random Generator Function
+
 
 
 def dice_generator(seed=40, n=10):
@@ -103,7 +110,7 @@ def dice_generator(seed=40, n=10):
         yield random.randint(1, 6)
 
 
-# Step 13: Decorated Plotting Function
+
 @deco("blue")
 def plot_dice(n=10):
     values = list(dice_generator(n=n))
