@@ -13,16 +13,15 @@ This project demonstrates object-oriented programming, file handling, dice simul
 - GitHub Actions CI for testing and formatting
 
 ## 📁 Project Structure
-prog2final/
 
-.
+prog2final/
 ├── file_handler.py
 ├── main.py
 ├── requirements.txt
 ├── Makefile
 ├── README.md
 ├── tests
-│   └── test_file_handler.py
+│ └── test_file_handler.py
 └── .github
-    └── workflows
-        └── python-app.yml
+└── workflows
+└── python-app.yml
