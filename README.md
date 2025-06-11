@@ -1,4 +1,4 @@
-# prog2final
+# Custom File handler and Random Dice generator
 
 This project demonstrates object-oriented programming, file handling, dice simulation, and basic data visualization in Python.
 
