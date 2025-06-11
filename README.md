@@ -15,7 +15,7 @@ This project demonstrates object-oriented programming, file handling, dice simul
 
 ## Project Structure
 
-prog2final/
+"""prog2final/
 ├── file_handler.py
 ├── main.py
 ├── requirements.txt
@@ -25,5 +25,5 @@ prog2final/
 │   └── test_file_handler.py
 └── .github
     └── workflows
-        └── python-app.yml
+        └── python-app.yml"""
 
