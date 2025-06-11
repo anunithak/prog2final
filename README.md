@@ -15,14 +15,14 @@ This project demonstrates object-oriented programming, file handling, dice simul
 ## 📁 Project Structure
 prog2final/
 
-├── file_handler.py # File handling classes
-├── main.py # Main script for dice simulation
-├── tests/
-│ └── test_file_handler.py # Pytest test cases
-├── .github/
-│ └── workflows/
-│ └── python-app.yml # GitHub Actions CI workflow
-├── requirements.txt # List of dependencies
-├── Makefile # Commands for install, test, run, clean
-└── README.md # Project overview
-
+.
+├── file_handler.py
+├── main.py
+├── requirements.txt
+├── Makefile
+├── README.md
+├── tests
+│   └── test_file_handler.py
+└── .github
+    └── workflows
+        └── python-app.yml
